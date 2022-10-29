@@ -1,0 +1,19 @@
+name: "Main Branch CI/CD"
+
+on:
+  push:
+    bracnhes:
+      - main
+
+jobs:
+  build and deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Deploy kar raha hun 🚀"
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - runs: npm i --location=global yarn
+    - runs: yarn
+    - runs: yarn test
+    - runs: yarn build
+    - runs: echo "Deploy done... 🤯"
