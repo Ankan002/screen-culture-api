@@ -12,8 +12,8 @@ jobs:
     - run: echo "Deploy kar raha hun 🚀"
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
-    - runs: npm i --location=global yarn
-    - runs: yarn
-    - runs: yarn test
-    - runs: yarn build
-    - runs: echo "Deploy done... 🤯"
+    - run: npm i --location=global yarn
+    - run: yarn
+    - run: yarn test
+    - run: yarn build
+    - run: echo "Deploy done... 🤯"
